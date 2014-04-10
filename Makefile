@@ -11,7 +11,7 @@ STATIC_OBJS=mtp2.o ss7_sched.o ss7.o mtp3.o isup.o version.o
 DYNAMIC_OBJS=mtp2.o ss7_sched.o ss7.o mtp3.o isup.o version.o
 STATIC_LIBRARY=libss7.a
 DYNAMIC_LIBRARY=libss7.so.1.0
-CFLAGS=-Wall -Werror -Wstrict-prototypes -Wmissing-prototypes -g -fPIC
+CFLAGS=-Werror -Wstrict-prototypes -Wmissing-prototypes -g -fPIC
 LDCONFIG_FLAGS=-n
 SOFLAGS=-Wl,-hlibss7.so.1
 LDCONFIG=/sbin/ldconfig
@@ -72,7 +72,7 @@ ss7linktest: ss7linktest.c $(STATIC_LIBRARY)
 	gcc -g -o ss7linktest ss7linktest.c libss7.a -lpthread
 
 parser_debug: parser_debug.c $(STATIC_LIBRARY)
-	gcc -g -Wall -o parser_debug parser_debug.c libss7.a
+	gcc -g -o parser_debug parser_debug.c libss7.a
 
 libss7: ss7_mtp.o mtp.o ss7.o ss7_sched.o
 
