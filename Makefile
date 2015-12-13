@@ -44,7 +44,7 @@ STATIC_OBJS= \
 DYNAMIC_OBJS= \
 	$(STATIC_OBJS)
 CFLAGS ?= -g
-CFLAGS += -Wall -Werror -Wstrict-prototypes -Wmissing-prototypes
+CFLAGS += -Werror -Wstrict-prototypes -Wmissing-prototypes
 CFLAGS += -fPIC $(LIBSS7_OPT) $(COVERAGE_CFLAGS)
 INSTALL_PREFIX=$(DESTDIR)
 INSTALL_BASE=/usr
